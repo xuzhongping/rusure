@@ -1,0 +1,7 @@
+cmds:
+  - "rm -rf /"
+  - "git checkout ."
+  - "git co ."
+ask: "Are you sure?"
+yes: 'Y'
+no: 'N'

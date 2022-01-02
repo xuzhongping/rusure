@@ -1,2 +1,2 @@
-source ${0:A:h}/zsh/rusure.zsh
+ source ${0:A:h}/zsh/rusure.zsh
 
