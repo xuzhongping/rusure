@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-
 config_path=${0:A:h}/config.yml
 cmds=("rm -rf /" "git checkout ." "git co ." "xzp")
 ask="This is a dangerous operation,are you sure?"
@@ -19,6 +18,7 @@ function rusure_exec(){
 }
 
 
+
 function resure_accept_line() {
 
 	if [[ ${BUFFER} == "resure_exec *" ]]; then
@@ -26,7 +26,15 @@ function resure_accept_line() {
 		return
 	fi
 
-	if [[ "${cmds[@]}" =~ ${BUFFER}  ]]; then
+	matched='false'
+	for cmd in ${cmds}; do
+		if [[ "${cmd}" == "${BUFFER}" ]]; then
+			matched='true'
+			break
+		fi
+	done
+ 
+	if [[ $matched == 'true' ]]; then
 		BUFFER="rusure_exec ${BUFFER}"
 		zle .accept-line
 		return
