@@ -14,7 +14,7 @@ Add 'are you sure?' support for your shell interactive commands.
   
         git clone https://github.com/xuzhongping/rusure.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/rusure
 
-* Enable it in your `.zshrc` by adding it to your plugin list and reloading the completion:
+* Activate the plugin in ~/.zshrc:
   
         plugins=(… rusure)
 
