@@ -74,6 +74,10 @@ Add 'are you sure?' support for your shell interactive commands.
 * Website: [nakahira.cn](https://nakahira.cn)
 * Github: [@xuzhongping](https://github.com/xuzhongping)
 
+### Thanks
+
+* [xiaochende](https://github.com/xiaochende)
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
