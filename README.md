@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/xuzhongping/rusure/main/images/logo.png" title="rusure" width="557"/>
 </p>
 
-Add confirmation function to your shell interactive commands.
+Add 'are you sure?' support for your shell interactive commands.
 
 ## Installation
 
@@ -26,12 +26,13 @@ Add confirmation function to your shell interactive commands.
   
   ```yaml
   cmds:
-    - "rm -rf ~"
-    - "other cmd"
+    - rm -rf ~
+    - git checkout .
+  # - other cmd
   # You can customize your prompt text.
-  ask: "Are you sure?"
-  yes: 'Y'
-  no: 'N'
+  ask: Are you sure?
+  yes: Y
+  no: N
   ```
 
 * When you enter a command and press the Enter key, if it hits the setting, it will automatically add a pre-command to your command:
@@ -60,10 +61,8 @@ Add confirmation function to your shell interactive commands.
   ```shell
   > rusure rm -rf ~
   ```
-  
-  
 
-## Features
+## Supported
 
 - [x] zsh 
 - [ ] other shell

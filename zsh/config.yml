@@ -1,7 +1,7 @@
 cmds:
-  - "rm -rf /"
-  - "git checkout ."
-  - "git co ."
-ask: "Are you sure?"
-yes: 'Y'
-no: 'N'
+#  - rm -rf ~
+# - other cmd
+# You can customize your prompt text. 
+ask: Are you sure?
+yes: Y
+no: N

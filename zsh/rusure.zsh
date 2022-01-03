@@ -1,10 +1,18 @@
 #!/bin/zsh
 
-readonly _rus_config_path=${0:A:h}/config.yml
-readonly _rus_cmds=("rm -rf /" "git checkout ." "git co ." "xzp")
-readonly _rus_ask="This is a dangerous operation,are you sure?"
-readonly _rus_yes='Y'
-readonly _rus_no='N'
+source ${0:A:h}/yaml.sh
+
+create_variables ${0:A:h}/config.yml
+
+readonly _rus_cmds=(${cmds})
+readonly _rus_ask=${ask}
+readonly _rus_yes=${yes}
+readonly _rus_no=${no}
+
+unset cmds
+unset ask
+unset yes
+unset no
 
 function rusure_exec(){
 	if [[ $# == 0 ]]; then
@@ -13,7 +21,7 @@ function rusure_exec(){
     printf "${_rus_ask}(${_rus_yes}/${_rus_no}):"
     read result
 
-    if [[ ${result:l} == 'y' ]] || [[ ${result:l} == '_rus_yes' ]]; then
+    if [[ ${result:l} == 'y' ]] || [[ ${result:l} == 'yes' ]]; then
     	eval $*
     else
     	echo 'canced!'
