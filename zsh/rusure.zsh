@@ -7,9 +7,12 @@ yes='Y'
 no='N'
 
 function rusure_exec(){
-
+	if [[ $# == 0 ]]; then
+		return
+	fi
     printf "${ask}(${yes}/${no}):"
     read result
+    
     if [[ ${result:l} == 'y' ]] || [[ ${result:l} == 'yes' ]]; then
     	eval $*
     else
@@ -17,15 +20,11 @@ function rusure_exec(){
     fi
 }
 
-
-
 function resure_accept_line() {
-
-	if [[ ${BUFFER} == "resure_exec *" ]]; then
+	if [[ ${BUFFER} =~ "^resure_exec " ]]; then
 		zle .accept-line
 		return
 	fi
-
 	matched='false'
 	for cmd in ${cmds}; do
 		if [[ "${cmd}" == "${BUFFER}" ]]; then
@@ -33,16 +32,16 @@ function resure_accept_line() {
 			break
 		fi
 	done
- 
 	if [[ $matched == 'true' ]]; then
 		BUFFER="rusure_exec ${BUFFER}"
 		zle .accept-line
 		return
 	fi
-
 	zle .accept-line
 }
 
 zle -N accept-line resure_accept_line
+
+alias rusure=rusure_exec
 
 
