@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/xuzhongping/rusure/main/images/logo.png" title="rusure" width="557"/>
 </p>
 
-Add 'are you sure?' support for your shell interactive commands.
+Add 'Are you sure?' support for your shell interactive commands.
 
 ## Installation
 
@@ -45,14 +45,14 @@ Add 'are you sure?' support for your shell interactive commands.
   
   ```shell
   > rusure_exec rm -rf ~
-  are you sure?(Y/N):
+  Are you sure?(Y/N):
   ```
 
 * If you type in any combination of uppercase and lowercase of Y or YES, the original command will start to execute, otherwise it will be cancelled.
   
   ```shell
   > rusure_exec rm -rf ~
-  are you sure?(Y/N):N
+  Are you sure?(Y/N):N
   Cancelled!
   ```
 
