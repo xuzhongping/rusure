@@ -53,7 +53,7 @@ Add 'are you sure?' support for your shell interactive commands.
   ```shell
   > rusure_exec rm -rf ~
   are you sure?(Y/N):N
-  canced!
+  Cancelled!
   ```
 
 * Of course, you can also explicitly type a pre-command to execute it:

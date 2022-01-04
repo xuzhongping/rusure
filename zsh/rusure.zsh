@@ -24,7 +24,7 @@ function rusure_exec(){
     if [[ ${result:l} == 'y' ]] || [[ ${result:l} == 'yes' ]]; then
     	eval $*
     else
-    	echo 'canced!'
+    	echo 'Cancelled!'
     fi
 }
 
