@@ -20,7 +20,7 @@ Add 'Are you sure?' support for your shell interactive commands.
 
 ## Usage
 
-* Set the commands you need to prompt in the configuration file:
+* Set the commands you need to prompt in the configuration file:
   
   > ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/rusure/zsh/config.yml
   
