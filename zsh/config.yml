@@ -1,6 +1,9 @@
 cmds:
-#  - rm -rf ~
+# The commented commands below do not work, it is just an example, you should delete them and enter your own preferences.
+# - git checkout .
+# - git clean -dxf
 # - other cmd
+
 # You can customize your prompt text. 
 ask: Are you sure?
 yes: Y
