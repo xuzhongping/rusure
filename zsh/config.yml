@@ -1,5 +1,5 @@
 cmds:
-#  - rm -rf ~
+- rm -rf ~
 # - other cmd
 # You can customize your prompt text. 
 ask: Are you sure?
