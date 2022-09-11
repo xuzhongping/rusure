@@ -28,11 +28,7 @@ function rusure_exec(){
     fi
 }
 
-function resure_accept_line() {
-	if [[ ${BUFFER} =~ "^resure_exec " ]]; then
-		zle .accept-line
-		return
-	fi
+function rusure_accept_line() {
 	matched='false'
 	for cmd in ${_rus_cmds}; do
 		if [[ "${cmd}" == "${BUFFER}" ]]; then
@@ -48,7 +44,7 @@ function resure_accept_line() {
 	zle .accept-line
 }
 
-zle -N accept-line resure_accept_line
+zle -N accept-line rusure_accept_line
 
 alias rusure=rusure_exec
 
